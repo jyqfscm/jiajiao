@@ -1,6 +1,7 @@
 package com.jiajiao.controller;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,24 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.jiajiao.bean.*;
+import com.jiajiao.service.*;
+import com.jiajiao.service.impl.EvaluationServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jiajiao.bean.Course;
-import com.jiajiao.bean.DictInfo;
-import com.jiajiao.bean.District;
-import com.jiajiao.bean.Member;
-import com.jiajiao.bean.MemberOrderTeacher;
-import com.jiajiao.bean.Orders;
-import com.jiajiao.bean.Teacher;
-import com.jiajiao.service.CourseService;
-import com.jiajiao.service.DictInfoService;
-import com.jiajiao.service.DistrictService;
-import com.jiajiao.service.MemberOrderTeacherService;
-import com.jiajiao.service.MemberService;
-import com.jiajiao.service.OrdersService;
 import com.jiajiao.utils.MD5Utils;
 import com.jiajiao.utils.PageUtil;
 
@@ -49,6 +41,9 @@ public class MemberController {
 
 	@Resource
 	private OrdersService ordersService;
+
+	@Resource
+	private EvaluationService evaluationService;
 
 	@Resource
 	private MemberOrderTeacherService memberOrderTeacherService;
@@ -325,6 +320,26 @@ public class MemberController {
 		modelAndView.addObject("orderList", orderList);
 		modelAndView.setViewName("member/evaluation");
 		return modelAndView;
+	}
+	@RequestMapping ("/submitEvaluation")
+	@ResponseBody
+	public Map<String, Object> submitEvaluation(@RequestParam int teacherId,
+												@RequestParam int orderId,
+												@RequestParam int memberId,
+												@RequestParam int score,
+												@RequestParam String evaluationContent) {
+		Evaluation evaluation = new Evaluation();
+		evaluation.setTeacherId(teacherId);
+		evaluation.setOId(orderId);
+		evaluation.setMemberId(memberId);
+		evaluation.setScore(score);
+		evaluation.setEvaluationContent(evaluationContent);
+		evaluation.setEvaluationTime(new Date().toString());
+
+		boolean isSuccess = evaluationService.submitEvaluation(evaluation);
+		Map<String, Object> response = new HashMap<>();
+		response.put("success", isSuccess);
+		return response;
 	}
 
 	@RequestMapping("orderList")
