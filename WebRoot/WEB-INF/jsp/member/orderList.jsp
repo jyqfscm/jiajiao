@@ -82,7 +82,10 @@
 										已完成
 										<%}else if(state==26){ %>
 										订单失败
+											<%}else if(state==27){ %>
+											已评价
 										<%}%>
+
 										</td>
 										<td>
 											<span class="blue_link">

@@ -177,7 +177,7 @@ var _hmt = _hmt || [];
 							<a href="<%=basePath %>member/appointList.action">预约教员记录</a>
 						</li>
 						<li>
-							<a href="#">评价教员</a>
+							<a href="<%=basePath %>member/evaluation.action">评价教员</a>
 						</li>
 						
 					</ul>

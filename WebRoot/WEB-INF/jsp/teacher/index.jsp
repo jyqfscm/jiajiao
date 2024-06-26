@@ -31,27 +31,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </dl>
 
 
-    <div class="clearfix tearch_step">
-        <h4 class="r_th_y"><b>快速接到家教的技巧</b></h4>
-       	<div style="margin-top: 25px;">
-       	<h2 style="color:#31ab68;font-weight:bold ">1. 加微信，随时接单</h5>
-       	<p style="font-size: 18px;margin-top: 10px">扫一扫，加好友，及时查看家教订单，接单快人一步！还可随时申请订单。<img style="margin-top: -50px;margin-left: 10px;" width="100px" height="100px"/></p>
-       	</div>
-       	<div  style="margin-top: 25px;">
-       	<h2 style="color:#31ab68;font-weight:bold ">2. 上传形象照，更出彩</h5>
-       	<p style="font-size: 18px;margin-top: 10px">阳光、健康、专业的形象照，增加您的第一印象分，让家长一眼就选定你，马上动手吧。</p>
-       	</div>
-       	<div  style="margin-top: 25px;">
-       	<h2 style="color:#31ab68;font-weight:bold ">3. 简历详尽，突出优势</h5>
-       	<p style="font-size: 18px;margin-top: 10px;margin-bottom: 15px;">尽量将您的资料填写详细，并突出您的特长和家教相关经验，以方便家长及家教114工作人员选择、推荐。好的简历，事半功倍，可以大大增加您的接单率！</p>
-       		<a style="font-size:20px;color: #999;" href="updateInfoPage.action">修改简历</a>
-       	</div>
-       	<div  style="margin-top:25px;">
-       	<h2 style="color:#31ab68;font-weight:bold ">4. 网上认证，机会更多</h5>
-       	<p style="font-size: 18px;margin-top: 10px;margin-bottom: 15px;">请您尽快将证件（如身份证、学生证、毕业证、家教资料证或相关的在职证明等）到网站上传进行身份验证，认证的教员我们将优先推荐家教。</p>
-       		<a style="font-size:20px;color: #999;" href="idimgPage.action">身份认证</a>
-       	</div>
-    </div>
+<%--    <div class="clearfix tearch_step">--%>
+<%--        <h4 class="r_th_y"><b>快速接到家教的技巧</b></h4>--%>
+<%--       	<div style="margin-top: 25px;">--%>
+<%--       	<h2 style="color:#31ab68;font-weight:bold ">1. 加微信，随时接单</h5>--%>
+<%--       	<p style="font-size: 18px;margin-top: 10px">扫一扫，加好友，及时查看家教订单，接单快人一步！还可随时申请订单。<img style="margin-top: -50px;margin-left: 10px;" width="100px" height="100px"/></p>--%>
+<%--       	</div>--%>
+<%--       	<div  style="margin-top: 25px;">--%>
+<%--       	<h2 style="color:#31ab68;font-weight:bold ">2. 上传形象照，更出彩</h5>--%>
+<%--       	<p style="font-size: 18px;margin-top: 10px">阳光、健康、专业的形象照，增加您的第一印象分，让家长一眼就选定你，马上动手吧。</p>--%>
+<%--       	</div>--%>
+<%--       	<div  style="margin-top: 25px;">--%>
+<%--       	<h2 style="color:#31ab68;font-weight:bold ">3. 简历详尽，突出优势</h5>--%>
+<%--       	<p style="font-size: 18px;margin-top: 10px;margin-bottom: 15px;">尽量将您的资料填写详细，并突出您的特长和家教相关经验，以方便家长及家教114工作人员选择、推荐。好的简历，事半功倍，可以大大增加您的接单率！</p>--%>
+<%--       		<a style="font-size:20px;color: #999;" href="updateInfoPage.action">修改简历</a>--%>
+<%--       	</div>--%>
+<%--       	<div  style="margin-top:25px;">--%>
+<%--       	<h2 style="color:#31ab68;font-weight:bold ">4. 网上认证，机会更多</h5>--%>
+<%--       	<p style="font-size: 18px;margin-top: 10px;margin-bottom: 15px;">请您尽快将证件（如身份证、学生证、毕业证、家教资料证或相关的在职证明等）到网站上传进行身份验证，认证的教员我们将优先推荐家教。</p>--%>
+<%--       		<a style="font-size:20px;color: #999;" href="idimgPage.action">身份认证</a>--%>
+<%--       	</div>--%>
+<%--    </div>--%>
     <!--快速接到家教的技巧-->
 
     

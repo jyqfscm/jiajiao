@@ -202,7 +202,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	/*用户-停用*/
 	function teacher_stop(obj, id) {
 		layer.confirm('确认要停用吗？', function(index) {
-		
+
 			var d = {
 	            IsAsync: true,
 	            id: id

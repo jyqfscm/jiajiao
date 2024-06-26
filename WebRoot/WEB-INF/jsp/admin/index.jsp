@@ -350,7 +350,7 @@ function link_operating(name,title){
 											class="icon-double-angle-right"></i>会员信息</a>
 									</li>
 									<li class="home">
-										<a href="javascript:void(0)" name="teacherList.action"
+										<a href="teacherInfo.action" name="teacherList.action"
 											title="教员信息" class="iframeurl"><i
 											class="icon-double-angle-right"></i>教员信息</a>
 									</li>

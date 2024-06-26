@@ -306,6 +306,26 @@ public class MemberController {
 
 		return modelAndView;
 	}
+	@RequestMapping("evaluation")
+	public ModelAndView evaluation(HttpServletResponse response,
+									HttpSession session) throws IOException {
+
+
+		ModelAndView modelAndView = new ModelAndView();
+
+		Member member = (Member) session.getAttribute("member");
+		if (member == null) {
+			modelAndView.setViewName("redirect:/welcome.action");
+			return modelAndView;
+		}
+
+		List<Orders> orderList = ordersService.findByMemberId(member
+				.getMemberId());
+
+		modelAndView.addObject("orderList", orderList);
+		modelAndView.setViewName("member/evaluation");
+		return modelAndView;
+	}
 
 	@RequestMapping("orderList")
 	public ModelAndView orderList(HttpSession session) {

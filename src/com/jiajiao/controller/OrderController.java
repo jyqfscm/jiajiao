@@ -46,6 +46,18 @@ public class OrderController {
 		return modelAndView;
 	}
 
+	@RequestMapping("evaluation")
+	public ModelAndView evaluation(int oId) {
+
+		ModelAndView modelAndView = new ModelAndView();
+
+		Orders order = ordersService.findById(oId);
+
+		modelAndView.addObject("order", order);
+		modelAndView.setViewName("evaluationInfo");
+		return modelAndView;
+	}
+
 	@RequestMapping("mOrderList")
 	public ModelAndView mOrderList(int kmdl, int courseId, int areaId,
 			int teacherType, int gender, int location) {
